@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="circle"></div>
+    <div id="counter" style="display: none;">0</div>
+    <button class="btn" onclick="changeimage('Change')">
+        <h2>Click</h2>
+    </button>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #circle {
+            height: 30vh;
+            width: 30vh;
+            border: 2px solid black;
+            margin: 10vh 44.5%;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .btn {
+            height: 3rem;
+            width: 7rem;
+            /* border: 2px solid black; */
+            margin: 1rem 47%;
+            border-radius: 1.5rem;
+            background-color: cyan;
+            color: white;
+        }
+
+        @media screen and (max-width:768px){
+            #circle{
+                margin: 7rem auto;
+                height: 40vh;
+                width: 40vh;
+            }
+
+            .btn {
+                margin: -20rem 35%;
+                
+            }
+        }
+    </style>
+
+    <script>
+        // Create a circle and a button. When I click on the button, the background color of the circle should be changed.
+
+        // var color=["blue", "green", "red", "yellow", "pink", "oranged"];
+
+        // var circle= document.getElementById('circle');
+        // circle.style.backgroundColor=color[counter];
+        // var counter=1;
+
+        // changecolor();
+
+        // function changecolor(param){
+
+        //         if(param=='Change'){
+        //             if(counter<color.length-1){
+        //                 counter++;
+        //             }
+        //             else{
+        //                 counter=0
+        //             }
+        //         }
+        //     circle.style.backgroundColor = color[counter];
+        //     }
+
+
+        // // Create a circle and a button. When I click on the button, the background image of the circle should be changed.
+
+
+        var image=["https://5.imimg.com/data5/SELLER/Default/2022/11/GL/OU/RE/138083958/vishnu-scc.jpg", "https://pxbar.com/wp-content/uploads/2023/10/ram-ji-ki-photo-hd-1024x1024.jpg", "https://www.truesilver.co.in/cdn/shop/files/GF80_01.jpg?v=1685773099", "https://i.pinimg.com/564x/4f/33/c8/4f33c8376ec2d17e688cf9451981b627.jpg", "https://pxbar.com/wp-content/uploads/2023/10/ram-ji-image-hd-1024x1024.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCXvwYVeqh6J8XgRD8GBFx4eorRjJVuPj2JA&usqp=CAU", "https://ih1.redbubble.net/image.2458303484.2186/ur,pin_large_front,square,600x600.jpg", "https://verywishes.com/wp-content/uploads/2024/01/Ayodhya-Ram-Madir-Ram-Lalla-Murti-HD-Photo-Download.jpg"];
+
+
+        var circle= document.getElementById('circle');
+        circle.style.backgroundImage=`url(${image[counter]})`;
+        var counter=0;
+  
+    
+
+        changeimage();
+
+        function changeimage(param){
+            if(param=='Change'){
+                if(counter<image.length-1){
+                counter++;
+            }
+            else{
+                counter= 0;
+            }
+            }
+            circle.style.backgroundImage=`url(${image[counter]})`;
+        }
+
+
+        
+        
+    </script>
+
+</body>
+
+</html>
